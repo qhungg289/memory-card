@@ -1,7 +1,56 @@
-import "./App.css";
+import "./style/App.css";
+import data from "./asset.json";
+import ScoreBoard from "./components/ScoreBoard";
+import CardContainer from "./components/CardContainer";
+import { useEffect, useState } from "react";
 
 function App() {
-	return <div></div>;
+	const [selectedPile, setSelectedPile] = useState([]);
+	const [randomizedPile, setRandomizedPile] = useState([]);
+
+	function checkForDuplicate(newSelectedCard) {
+		if (
+			!selectedPile.some(
+				(alreadySelectedCard) => newSelectedCard === alreadySelectedCard
+			)
+		) {
+			setSelectedPile([...selectedPile, newSelectedCard]);
+		} else {
+			setSelectedPile([]);
+		}
+	}
+
+	function randomizedCardFromAsset() {
+		const mainAssetPile = data.asset;
+		let tempPile = [];
+
+		while (tempPile.length < 6) {
+			let randomizedIndex = Math.floor(Math.random() * mainAssetPile.length);
+
+			if (
+				!tempPile.some(
+					(tempCard) => tempCard.name === mainAssetPile[randomizedIndex].name
+				)
+			) {
+				tempPile.push(mainAssetPile[randomizedIndex]);
+			} else {
+				randomizedIndex = Math.floor(Math.random() * mainAssetPile.length);
+			}
+		}
+
+		setRandomizedPile(tempPile);
+	}
+
+	useEffect(() => {
+		randomizedCardFromAsset();
+	}, [selectedPile]);
+
+	return (
+		<div className="app">
+			<ScoreBoard score={selectedPile.length} />
+			<CardContainer pile={randomizedPile} onClick={checkForDuplicate} />
+		</div>
+	);
 }
 
 export default App;
