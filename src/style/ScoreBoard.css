@@ -1,0 +1,9 @@
+.score-board {
+	height: 10vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: #585858;
+}

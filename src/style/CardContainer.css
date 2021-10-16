@@ -1,6 +1,8 @@
 .card-container {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	align-items: center;
-	height: 80vh;
+	height: 90vh;
+	flex-wrap: wrap;
+	flex-direction: column;
 }
