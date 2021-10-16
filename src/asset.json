@@ -2,7 +2,7 @@
 	"asset": [
 		{
 			"name": "A-chan",
-			"avatar": "asset/A-chan.jpg"
+			"avatar": "asset/A-chan.png"
 		},
 		{
 			"name": "Iofi",
@@ -22,7 +22,7 @@
 		},
 		{
 			"name": "Anya",
-			"avatar": "asset/Anya_Melfissa_Portrait.jpg"
+			"avatar": "asset/Anya_Melfissa_Portrait.png"
 		},
 		{
 			"name": "Oga",
@@ -34,7 +34,7 @@
 		},
 		{
 			"name": "Astel",
-			"avatar": "asset/Astel_Leda_-_Portrait.jpg"
+			"avatar": "asset/Astel_Leda_-_Portrait.png"
 		},
 		{
 			"name": "Risu",
@@ -90,7 +90,7 @@
 		},
 		{
 			"name": "Jenma",
-			"avatar": "asset/Jenma.jpg"
+			"avatar": "asset/Jenma.png"
 		},
 		{
 			"name": "Kira",
@@ -110,7 +110,7 @@
 		},
 		{
 			"name": "Temma",
-			"avatar": "asset/Kishido_Temma_-_Portrait.jpg"
+			"avatar": "asset/Kishido_Temma_-_Portrait.png"
 		},
 		{
 			"name": "Ollie",
@@ -118,7 +118,7 @@
 		},
 		{
 			"name": "MaID",
-			"avatar": "asset/MaID.jpg"
+			"avatar": "asset/MaID.png"
 		},
 		{
 			"name": "Aloe",
@@ -134,7 +134,7 @@
 		},
 		{
 			"name": "Moona",
-			"avatar": "asset/Moona_Hoshinova_Portrait.jpg"
+			"avatar": "asset/Moona_Hoshinova_Portrait.png"
 		},
 		{
 			"name": "Calliope",
@@ -202,11 +202,11 @@
 		},
 		{
 			"name": "Shinove",
-			"avatar": "asset/Shinove-pic.jpg"
+			"avatar": "asset/Shinove-pic.png"
 		},
 		{
 			"name": "Fubuki",
-			"avatar": "asset/Shirakami_Fubuki_Portrait.jpg"
+			"avatar": "asset/Shirakami_Fubuki_Portrait.png"
 		},
 		{
 			"name": "Flare",
@@ -258,7 +258,7 @@
 		},
 		{
 			"name": "YAGOO",
-			"avatar": "asset/YAGOO_headshot.jpg"
+			"avatar": "asset/YAGOO_headshot.png"
 		},
 		{
 			"name": "Suzaku",
@@ -274,7 +274,7 @@
 		},
 		{
 			"name": "Roberu",
-			"avatar": "asset/Yukoku_Roberu_-_Portrait.jpg"
+			"avatar": "asset/Yukoku_Roberu_-_Portrait.png"
 		},
 		{
 			"name": "Choco",
