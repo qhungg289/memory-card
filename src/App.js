@@ -1,12 +1,16 @@
 import "./style/App.css";
+import "./style/Button.css";
+import "./style/Modal.css";
 import data from "./asset.json";
 import ScoreBoard from "./components/ScoreBoard";
 import CardContainer from "./components/CardContainer";
+import ReactModal from "react-modal";
 import { useEffect, useState } from "react";
 
 function App() {
 	const [selectedPile, setSelectedPile] = useState([]);
 	const [randomizedPile, setRandomizedPile] = useState([]);
+	const [isGameOver, setIsGameOver] = useState(false);
 
 	function checkForDuplicate(newSelectedCard) {
 		if (
@@ -16,7 +20,7 @@ function App() {
 		) {
 			setSelectedPile([...selectedPile, newSelectedCard]);
 		} else {
-			setSelectedPile([]);
+			setIsGameOver(true);
 		}
 	}
 
@@ -41,6 +45,11 @@ function App() {
 		setRandomizedPile(tempPile);
 	}
 
+	function newGame() {
+		setIsGameOver(false);
+		setSelectedPile([]);
+	}
+
 	useEffect(() => {
 		randomizedCardFromAsset();
 	}, [selectedPile]);
@@ -49,6 +58,13 @@ function App() {
 		<div className="app">
 			<ScoreBoard score={selectedPile.length} />
 			<CardContainer pile={randomizedPile} onClick={checkForDuplicate} />
+			<ReactModal isOpen={isGameOver} ariaHideApp={false} className="modal">
+				<h3>Game over</h3>
+				<p>You got {selectedPile.length} score</p>
+				<button onClick={() => newGame()} className="new-game-btn">
+					Play again
+				</button>
+			</ReactModal>
 		</div>
 	);
 }
